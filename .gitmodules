@@ -1,3 +1,6 @@
 [submodule "sicp"]
 	path = sicp
 	url = https://github.com/sunfora/sicp
+[submodule "example-obsidian"]
+	path = example-obsidian
+	url = https://github.com/sunfora/example-obsidian
