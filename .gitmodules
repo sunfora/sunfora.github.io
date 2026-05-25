@@ -4,3 +4,6 @@
 [submodule "bytesanity"]
 	path = bytesanity
 	url = https://github.com/sunfora/bytesanity
+[submodule "bug_reports"]
+	path = bug_reports
+	url = https://github.com/sunfora/bug_reports
