@@ -7,3 +7,6 @@
 [submodule "bug_reports"]
 	path = bug_reports
 	url = https://github.com/sunfora/bug_reports
+[submodule "software-i-wish-existed"]
+	path = software-i-wish-existed
+	url = https://github.com/sunfora/software-i-wish-existed
