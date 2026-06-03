@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8">
     <title>Shipwreck</title>
+    <script>
+      document.documentElement.className = "js";
+    </script>
 
     <style>
       :root {
@@ -16,6 +19,40 @@
         left:  calc(15rem / 16);
         width: calc(75rem / 16);
       }
+      
+      .js #hat {
+        display: none;
+      }
+      .js #hat.bounce-in-down {
+          animation: bounceInDown 1.2s both;
+      }
+
+      @keyframes bounceInDown {
+        0% {
+          transform: translateY(calc(-500rem/16));
+          animation-timing-function: ease-in;
+        }
+        60% {
+          transform: translateY(0);
+          animation-timing-function: ease-out;
+        }
+        75% {
+          transform: translateY(calc(-20rem/16));
+          animation-timing-function: ease-in;
+        }
+        90% {
+          transform: translateY(0);
+          animation-timing-function: ease-out;
+        }
+        95% {
+          transform: translateY(calc(-2rem/16));
+          animation-timing-function: ease-in;
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+
       h1 {
         padding:     calc(10rem / 16);
         margin-top:  calc(30rem / 16);
@@ -56,6 +93,22 @@
         color: black;
       }
     </style>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const hat = document.querySelector('#hat');
+        
+        function animate_hat() {
+          hat.style.display = "block";
+          hat.classList.add("bounce-in-down");
+        }
+        if (hat.complete) {
+          hat.style.display = "block";
+        } else {
+          hat.addEventListener('load', animate_hat, { once: true });
+        }
+      });
+    </script>
   </head>
   
 
