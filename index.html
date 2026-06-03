@@ -24,7 +24,7 @@
         display: none;
       }
       .js #hat.bounce-in-down {
-          animation: bounceInDown 1.2s both;
+        animation: bounceInDown 1.2s both;
       }
 
       @keyframes bounceInDown {
@@ -107,6 +107,21 @@
         } else {
           hat.addEventListener('load', animate_hat, { once: true });
         }
+
+        hat.addEventListener('click', () => {
+          hat.animate(
+            [
+              { transform: 'scale(1)',   filter: 'brightness(1)'   },
+              { transform: 'scale(1.1)', filter: 'brightness(1.2)' },
+              { transform: 'scale(1)',   filter: 'brightness(1)'   }
+            ], 
+            {
+              duration: 300,
+              easing: 'ease-in-out',
+              fill: 'both'
+            }
+          );
+        });
       });
     </script>
   </head>
